@@ -367,26 +367,6 @@ own `node_modules`, its own `build/`, and its own dev server.
 
 ## Additional Notes
 
-### Trial Builds and Vendor Watermarks
-
-The Bryntum and DHTMLX Gantt packages are installed as their official trial
-distributions. The trial UIs carry a vendor watermark on roughly 50% of the
-viewport. The watermark is a decorative overlay and does not affect render
-time, interaction latency, memory usage, or bundle size.
-
-### Syncfusion Theming
-
-The Syncfusion sub-project uses the bundled Material theme by default. To A/B
-visually against another theme, pass a `cssClass` to the
-`<GanttComponent>` instance in `src/App.js`.
-
-### DHTMLX Project Promotion
-
-The DHTMLX React wrapper auto-promotes parents to projects (`auto_types: true`)
-by default, which can cause the rendered bar to extend beyond the visible
-range. To disable this behaviour, set `auto_types: false` in
-`src/bench/ganttSetup.js` under `defaultConfig`.
-
 ### React 19 Compatibility
 
 The benchmark targets React 19.2.8. Some of the libraries included in this
