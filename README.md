@@ -5,6 +5,14 @@ A reproducible performance benchmark comparing leading Gantt chart libraries:
 the same dataset, UI patterns, and measurement harness, so results are directly
 comparable across implementations.
 
+## Tested Libraries
+
+| Library                  | Version             |
+|--------------------------|---------------------|
+| Syncfusion Gantt         | Latest              |
+| DHTMLX Gantt             | Latest              |
+| Bryntum Gantt            | 7.3.5 (trial)       |
+
 ## What it measures
 
 | Page               | What is timed / observed                                                                 |
@@ -36,18 +44,6 @@ Every sub-project exposes the **same** benchmark pages listed above, the
 **same** dataset presets (1K / 5K / 10K / 25K tasks), and the **same**
 `useDataset` hook, so a score recorded on one page can be compared
 directly against the equivalent page in another sub-project.
-
-## Library Versions
-
-| Library     | Package                          | Version  |
-| ----------- | -------------------------------- | -------- |
-| Syncfusion  | @syncfusion/ej2-react-gantt      | Latest   |
-| Bryntum     | @bryntum/gantt-react             | ^7.3.5   |
-| DHTMLX      | @dhtmlx/trial-react-gantt        | Latest   |
-
-> **Note:** Syncfusion and DHTMLX versions follow the latest available releases
-> via the `*` specifier in package.json. To pin specific versions, update the
-> dependency entries in each sub-project's `package.json`.
 
 ## Getting started
 
