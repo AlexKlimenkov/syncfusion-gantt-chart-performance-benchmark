@@ -1,4 +1,4 @@
-# Gantt Chart Performance Benchmark
+# React Gantt Chart Performance Benchmark
 
 A reproducible performance benchmark comparing leading Gantt chart libraries:
 **Syncfusion**, **Bryntum**, and **DHTMLX**. Each library is benchmarked against
