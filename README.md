@@ -1,9 +1,9 @@
-# gantt-chart-performance-benchmark
+# Gantt Chart Performance Benchmark
 
-A side-by-side performance benchmark of four React Gantt chart libraries —
-**Syncfusion**, **Kendo UI**, **Bryntum**, and **DHTMLX** — wrapped around the
-same dataset, the same UI, and the same measurement harness, so the numbers
-are directly comparable.
+A reproducible performance benchmark comparing leading Gantt chart libraries:
+**Syncfusion**, **Bryntum**, and **DHTMLX**. Each library is benchmarked against
+the same dataset, UI patterns, and measurement harness, so results are directly
+comparable across implementations.
 
 ## What it measures
 
@@ -27,7 +27,6 @@ others.
 ```
 gantt-chart-performance-benchmark/
 ├── syncfusion-gantt-benchmark/    React 19 + @syncfusion/ej2-react-gantt
-├── kendo-gantt-benchmark/         React 19 + @progress/kendo-react-gantt
 ├── bryntum-gantt-benchmark/       React 19 + @bryntum/gantt-react (trial)
 ├── dhtmlx-gantt-benchmark/        React 19 + @dhtmlx/trial-react-gantt
 └── README.md                      (you are here)
@@ -38,21 +37,33 @@ Every sub-project exposes the **same** benchmark pages listed above, the
 `useDataset` hook, so a score recorded on one page can be compared
 directly against the equivalent page in another sub-project.
 
+## Library Versions
+
+| Library     | Package                          | Version  |
+| ----------- | -------------------------------- | -------- |
+| Syncfusion  | @syncfusion/ej2-react-gantt      | Latest   |
+| Bryntum     | @bryntum/gantt-react             | ^7.3.5   |
+| DHTMLX      | @dhtmlx/trial-react-gantt        | Latest   |
+
+> **Note:** Syncfusion and DHTMLX versions follow the latest available releases
+> via the `*` specifier in package.json. To pin specific versions, update the
+> dependency entries in each sub-project's `package.json`.
+
 ## Getting started
 
 Each sub-project is independent — `cd` into the one you want to run.
 
 ```bash
 # Pick a library
-cd syncfusion-gantt-benchmark     # or kendo- / bryntum- / dhtmlx-
+cd syncfusion-gantt-benchmark     # or bryntum- / dhtmlx-
 
 # Install
 npm install
 
-# Run the dev server (http://localhost:3000)
+# Run the dev server
 npm start
 
-# Build for production + emit bundle stats (Syncfusion / Bryntum / DHTMLX)
+# Build for production + emit bundle stats
 npm run build
 
 # Just regenerate the bundle report without rebuilding
@@ -93,13 +104,10 @@ shapes, you can sweep across them like this:
 cd syncfusion-gantt-benchmark && npm start
 
 # Terminal 2
-cd kendo-gantt-benchmark && BROWSER=none PORT=3001 npm start
+cd bryntum-gantt-benchmark && BROWSER=none PORT=3001 npm start
 
 # Terminal 3
-cd bryntum-gantt-benchmark && BROWSER=none PORT=3002 npm start
-
-# Terminal 4
-cd dhtmlx-gantt-benchmark  && BROWSER=none PORT=3003 npm start
+cd dhtmlx-gantt-benchmark && BROWSER=none PORT=3002 npm start
 ```
 
 Then navigate to the **same page** (e.g. Hierarchy or Dependency) on
@@ -122,8 +130,5 @@ each origin and compare the metric summaries side-by-side.
 - **DHTMLX** ships as the trial via `@dhtmlx/trial-react-gantt`. The
   wrapper auto-promotes parents to projects (`auto_types: true`) — turn
   it off in `defaultConfig` if the cascaded bar length surprises you.
-- **Kendo** ships against `@progress/kendo-theme-default`. Some pages
-  require their own theme import; check `src/App.js` for the current
-  setup.
 - **Syncfusion** defaults to its bundled Material theme; pass `cssClass`
-  to `<GanttComponent>` if you want to A/B visually with Kendo.
+  to `<GanttComponent>` if you want to customize the theme.
