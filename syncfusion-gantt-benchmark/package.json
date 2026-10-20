@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@syncfusion/ej2-react-gantt": "*",
+    "@syncfusion/ej2-react-gantt": "35.1.37",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
@@ -39,5 +39,35 @@
   },
   "devDependencies": {
     "source-map-explorer": "^2.5.3"
+  },
+  "overrides": {
+    "@syncfusion/ej2-base": "35.1.37",
+    "@syncfusion/ej2-buttons": "35.1.37",
+    "@syncfusion/ej2-calendars": "35.1.37",
+    "@syncfusion/ej2-compression": "35.1.37",
+    "@syncfusion/ej2-data": "35.1.37",
+    "@syncfusion/ej2-dropdowns": "35.1.37",
+    "@syncfusion/ej2-excel-export": "35.1.37",
+    "@syncfusion/ej2-file-utils": "35.1.37",
+    "@syncfusion/ej2-filemanager": "35.1.37",
+    "@syncfusion/ej2-gantt": "35.1.37",
+    "@syncfusion/ej2-grids": "35.1.37",
+    "@syncfusion/ej2-icons": "35.1.37",
+    "@syncfusion/ej2-inputs": "35.1.37",
+    "@syncfusion/ej2-interactive-chat": "35.1.37",
+    "@syncfusion/ej2-layouts": "35.1.37",
+    "@syncfusion/ej2-lists": "35.1.37",
+    "@syncfusion/ej2-markdown-converter": "35.1.37",
+    "@syncfusion/ej2-navigations": "35.1.37",
+    "@syncfusion/ej2-notifications": "35.1.37",
+    "@syncfusion/ej2-pdf-export": "35.1.37",
+    "@syncfusion/ej2-popups": "35.1.37",
+    "@syncfusion/ej2-querybuilder": "35.1.37",
+    "@syncfusion/ej2-react-base": "35.1.37",
+    "@syncfusion/ej2-react-gantt": "35.1.37",
+    "@syncfusion/ej2-richtexteditor": "35.1.37",
+    "@syncfusion/ej2-splitbuttons": "35.1.37",
+    "@syncfusion/ej2-svg-base": "35.1.37",
+    "@syncfusion/ej2-treegrid": "35.1.37"
   }
 }
