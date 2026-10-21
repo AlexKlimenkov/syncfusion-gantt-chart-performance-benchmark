@@ -106,7 +106,7 @@ public npm registry at the time of publication.
 
 | Component                          | Version | Source                              |
 |------------------------------------|---------|-------------------------------------|
-| `@syncfusion/ej2-react-gantt`      | 35.1.37 | Latest published on npm (resolved wildcard) |
+| `@syncfusion/ej2-react-gantt`      | 35.1.41 | Declared in `syncfusion-gantt-benchmark/package.json` (`35.1.41`) |
 | `@bryntum/gantt-react`             | 7.3.5   | Declared in `bryntum-gantt-benchmark/package.json` (`^7.3.5`) |
 | `@bryntum/gantt` (aliased)         | 7.3.5   | npm alias → `@bryntum/gantt-trial` (`^7.3.5`) |
 | `@dhtmlx/trial-react-gantt`        | 10.0.3  | Latest published on npm (resolved wildcard) |
